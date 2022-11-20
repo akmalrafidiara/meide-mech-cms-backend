@@ -5,4 +5,5 @@
   <li>Akmal Rafi Diara Putra</li>
   <li>Muhammad Hadiid Faathir</li>
   <li>Rasyaad Maulana Khandiyas</li>
+  <li>Muhammad Izzat Azizan</li>
 </ul>
