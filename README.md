@@ -6,4 +6,5 @@
   <li>Muhammad Hadiid Faathir</li>
   <li>Rasyaad Maulana Khandiyas</li>
   <li>Muhammad Izzat Azizan</li>
+  <li>Delvino Ardi</li>
 </ul>
