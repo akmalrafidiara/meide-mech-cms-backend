@@ -83,6 +83,7 @@ class User extends BaseController
             'updateBy' => session()->get('username'),
         ];
         $this->userModel->save($data);
+        session()->setFlashdata('msg', 'User Successfully Created');
         return redirect()->to('/admin/user');
     }
 
@@ -172,6 +173,7 @@ class User extends BaseController
             'updateBy' => session()->get('username'),
         ];
         $this->userModel->save($data);
+        session()->setFlashdata('msg', 'User Successfully Updated');
         return redirect()->to('/admin/user');
     }
     public function destroy($id)
@@ -181,6 +183,7 @@ class User extends BaseController
             unlink('img/' . $user['images']);
         }
         $this->userModel->delete($id);
+        session()->setFlashdata('msg', 'User Successfully Deleted');
         return redirect()->to('/admin/user');
     }
 
@@ -192,7 +195,8 @@ class User extends BaseController
 
     public function getOne($id)
     {
-        $data = $this->userModel->find($id);
+        $data = $this->sosmedModel->find($id);
         return $this->response->setJSON($data);
     }
+
 }

@@ -80,7 +80,7 @@
                   name="role">
                   <option selected disabled>Select Role</option>
                   <option value="administrator">Administrator</option>
-                  <option value="client">Clinet</option>
+                  <option value="client">Client</option>
                   <option value="user">User</option>
                 </select>
                 <div class="invalid-feedback">

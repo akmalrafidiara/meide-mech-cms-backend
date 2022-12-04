@@ -25,7 +25,7 @@ class SocialMedia extends BaseController
     public function create()
     {
         $data = [
-            'title' => 'Add User',
+            'title' => 'Add Socail Media',
             'view' => 'admin/social_media/create',
             'validation' => \Config\Services::validation()
         ];
@@ -66,13 +66,14 @@ class SocialMedia extends BaseController
             'updateBy' => session()->get('username'),
         ];
         $this->sosmedModel->save($data);
+        session()->setFlashdata('msg', 'Social Media Successfully Created');
         return redirect()->to('/admin/social_media');
     }
 
     public function edit($id)
     {
         $data = [
-            'title' => 'Edit User',
+            'title' => 'Edit Social Media',
             'view' => 'admin/social_media/edit',
             'data' => $this->sosmedModel->find($id),
             'validation' => \Config\Services::validation()
@@ -116,6 +117,7 @@ class SocialMedia extends BaseController
             'updateBy' => session()->get('username'),
         ];
         $this->sosmedModel->save($data);
+        session()->setFlashdata('msg', 'Social Media Successfully Updated');
         return redirect()->to('/admin/social_media');
     }
 
@@ -124,18 +126,8 @@ class SocialMedia extends BaseController
         $sosmed = $this->sosmedModel->find($id);
         unlink('img/' . $sosmed['icon']);
         $this->sosmedModel->delete($id);
+        session()->setFlashdata('msg', 'Social Media Successfully Deleted');
         return redirect()->to('/admin/social_media');
     }
 
-    public function getAll()
-    {
-        $data = $this->this->userModel->findAll();
-        return $this->response->setJSON($data);
-    }
-
-    public function getOne($id)
-    {
-        $data = $this->sosmedModel->find($id);
-        return $this->response->setJSON($data);
-    }
 }
