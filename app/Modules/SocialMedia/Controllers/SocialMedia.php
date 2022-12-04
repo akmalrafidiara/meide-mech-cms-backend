@@ -25,7 +25,7 @@ class SocialMedia extends BaseController
     public function create()
     {
         $data = [
-            'title' => 'Add Socail Media',
+            'title' => 'Add Social Media',
             'view' => 'admin/social_media/create',
             'validation' => \Config\Services::validation()
         ];
