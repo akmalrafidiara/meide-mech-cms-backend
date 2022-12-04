@@ -3,6 +3,7 @@
 namespace App\Modules\Auth\Controllers;
 
 use CodeIgniter\Controller;
+use CodeIgniter\HTTP\RequestInterface;
 use App\Modules\Auth\Models\AuthModel;
 
 class Auth extends BaseController
@@ -16,6 +17,9 @@ class Auth extends BaseController
 
     public function index()
     {
+        if (session()->get('isLoggedIn')) {
+            return redirect()->to('/admin');
+        }
         return view('admin/auth/signin');
     }
 
@@ -24,6 +28,30 @@ class Auth extends BaseController
         $session = session();
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
+
+        $recaptchaResponse = trim($this->request->getVar('g-recaptcha-response'));
+
+        $secret = '6LeO0E4jAAAAABEX4JoKJdAVuYlMdJFPi3GIkevy';
+
+        $credential = array(
+            'secret' => $secret,
+            'response' => $recaptchaResponse
+        );
+
+        $verify = curl_init();
+        curl_setopt($verify, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+        curl_setopt($verify, CURLOPT_POST, true);
+        curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($credential));
+        curl_setopt($verify, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($verify);
+
+        $status = json_decode($response, true);
+
+        if (!$status['success']) {
+            $session->setFlashdata('msg', 'Check captcha first!');
+            return redirect()->to('/login');
+        }
 
         $data = $this->authModel->where('username', $username)->first();
         if ($data) {

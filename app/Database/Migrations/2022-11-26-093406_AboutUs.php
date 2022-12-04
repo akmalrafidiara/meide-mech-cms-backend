@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Product extends Migration
+class AboutUs extends Migration
 {
     public function up()
     {
@@ -15,46 +15,42 @@ class Product extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'name' => [
+            'title' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
-            ],
-            'overview' => [
-                'type'       => 'TEXT',
             ],
             'description' => [
                 'type'       => 'TEXT',
             ],
-            'specification' => [
-                'type'       => 'TEXT',
-            ],
-            'is_new' => [
-                'type'       => 'BOOLEAN',
-            ],
-            'status' => [
-                'type'       => 'BOOLEAN',
-            ],
-            'createBy' => [
+            'video' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '255',
+            ],
+            'other_description' => [
+                'type'       => 'TEXT',
+                'null' => true,
             ],
             'createDate' => [
                 'type'       => 'DATETIME',
             ],
-            'updateBy' => [
+            'createBy' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
             'updateDate' => [
                 'type'       => 'DATETIME',
             ],
+            'updateBy' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('product');
+        $this->forge->createTable('about_us');
     }
 
     public function down()
     {
-        $this->forge->dropTable('product');
+        $this->forge->dropTable('about_us');
     }
 }

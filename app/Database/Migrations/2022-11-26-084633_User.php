@@ -63,7 +63,8 @@ class User extends Migration
                 'type'       => 'BOOLEAN',
             ],
             'rules' => [
-                'type'       => 'BOOLEAN',
+                'type'       => 'VARCHAR',
+                'constraint' => '20',
             ],
             'images' => [
                 'type'       => 'VARCHAR',

@@ -22,27 +22,27 @@ class ProductDimension extends Migration
             ],
             'inch' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '100',
             ],
             'mm' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '100',
             ],
             'kgs' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '100',
             ],
             'pcs_or_csn' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '100',
             ],
             'ctn_qty_or_plt' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '100',
             ],
             'crate_or_plt_qty_20_container' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '100',
             ],
         ]);
         $this->forge->addKey('id', true);

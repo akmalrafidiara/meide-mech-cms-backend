@@ -42,7 +42,7 @@
             <?php foreach ($data as $key => $d) : ?>
             <tr>
               <td><?= $key + 1 ?></td>
-              <td><img src="/img/<?= $d['images'] ?>" alt="" style="width: 100px;"></td>
+              <td class="text-center"><img src="/img/<?= $d['images'] ?>" alt="" style="width: 100px;"></td>
               <td><?= $d['full_name'] ?></td>
               <td><?= $d['username'] ?></td>
               <td><?= $d['email'] ?></td>
@@ -50,19 +50,21 @@
                 <?= $d['status'] == '1' ? '<span class="badge bg-success">Active</span>' : '<span class="badge bg-danger">Deactive</span>' ?>
               </td>
               <td>
-                <?= $d['rules'] == '1' ? '<span class="badge bg-primary">Online</span>' : '<span class="badge bg-secondary">Offline</span>' ?>
+                <span class="badge bg-info"><?= $d['rules'] ?></span>
               </td>
               <td>
                 <?= $d['is_online'] == '1' ? '<span class="badge bg-primary">Online</span>' : '<span class="badge bg-secondary">Offline</span>' ?>
               </td>
-              <td>
-                <a href=""><i class="fa-solid fa-pen-to-square"></i></a> |
-                <form action="/admin/user/<?= $d['id'] ?>" method="POST">
-                  <?= csrf_field() ?>
-                  <input type="hidden" name="_method" value="DELETE">
-                  <button type="submit" style="border: none; outline: none; display: inline"
-                    onclick="return confiem('Want to delete this item?')"><i class="fa-solid fa-trash"></i></button>
-                </form>
+              <td class="text-center">
+                <div class="btn-group" role="group">
+                  <a href="user/edit/<?= $d['uuid'] ?>"><i class="fa-solid fa-pen-to-square"></i></a> |
+                  <form action="/admin/user/<?= $d['id'] ?>" method="POST">
+                    <?= csrf_field() ?>
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" style="all: unset; cursor: pointer; color: #dc3545;"
+                      onclick="return confirm('Want to delete this item?')"><i class="fa-solid fa-trash"></i></button>
+                  </form>
+                </div>
               </td>
             </tr>
             <?php endforeach ?>

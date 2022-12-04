@@ -24,8 +24,7 @@ class Category extends Migration
                 'constraint' => '255',
             ],
             'status' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '100',
+                'type'       => 'BOOLEAN',
             ],
             'createBy' => [
                 'type'       => 'VARCHAR',

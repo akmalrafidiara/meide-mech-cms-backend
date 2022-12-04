@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Product extends Migration
+class FooterSection extends Migration
 {
     public function up()
     {
@@ -15,46 +15,34 @@ class Product extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'name' => [
+            'content' => [
+                'type'       => 'TEXT',
+            ],
+            'telp_number' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
-            'overview' => [
-                'type'       => 'TEXT',
-            ],
-            'description' => [
-                'type'       => 'TEXT',
-            ],
-            'specification' => [
-                'type'       => 'TEXT',
-            ],
-            'is_new' => [
-                'type'       => 'BOOLEAN',
-            ],
-            'status' => [
-                'type'       => 'BOOLEAN',
-            ],
-            'createBy' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => '20',
             ],
             'createDate' => [
                 'type'       => 'DATETIME',
             ],
-            'updateBy' => [
+            'createBy' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
             'updateDate' => [
                 'type'       => 'DATETIME',
             ],
+            'updateBy' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('product');
+        $this->forge->createTable('footer_section');
     }
 
     public function down()
     {
-        $this->forge->dropTable('product');
+        $this->forge->dropTable('footer_section');
     }
 }

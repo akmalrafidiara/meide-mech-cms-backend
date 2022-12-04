@@ -36,3 +36,37 @@
     </div>
   </div>
 </main>
+
+
+<body>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-5">
+
+        <h2>Login in</h2>
+
+        <?php if (session()->getFlashdata('msg')) : ?>
+        <div class="alert alert-warning">
+          <?= session()->getFlashdata('msg') ?>
+        </div>
+        <?php endif; ?>
+        <form action="/signin" method="post">
+          <div class="form-group mb-3">
+            <input type="text" name="username" placeholder="Username" class="form-control">
+          </div>
+          <div class="form-group mb-3">
+            <input type="password" name="password" placeholder="Password" class="form-control">
+          </div>
+
+          <div class="g-recaptcha mb-3" data-sitekey="6LeO0E4jAAAAAOOR5AZSLFpipt7qCxj2pEUW2UNp"></div>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-success">Signin</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+</body>

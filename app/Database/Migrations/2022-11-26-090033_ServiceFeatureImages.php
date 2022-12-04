@@ -25,8 +25,7 @@ class ServiceFeatureImages extends Migration
                 'constraint' => '255',
             ],
             'status' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'BOOLEAN',
             ],
         ]);
         $this->forge->addKey('id', true);

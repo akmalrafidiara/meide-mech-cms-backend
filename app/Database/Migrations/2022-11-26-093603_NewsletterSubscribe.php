@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class ProductImages extends Migration
+class NewsletterSubscribe extends Migration
 {
     public function up()
     {
@@ -15,30 +15,25 @@ class ProductImages extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'product_id' => [
-                'type'           => 'INT',
-                'constraint'     => 5,
-                'unsigned'       => true,
-            ],
-            'images' => [
+            'email' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'thumbnail_images' => [
+            'ip_address' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'status' => [
-                'type'       => 'BOOLEAN',
+            'browser' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('product_id', 'product', 'id');
-        $this->forge->createTable('product_images');
+        $this->forge->createTable('newsletter_subscribe');
     }
 
     public function down()
     {
-        $this->forge->dropTable('product_images');
+        $this->forge->dropTable('newsletter_subscribe');
     }
 }
