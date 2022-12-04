@@ -56,10 +56,39 @@
             <div class="collapse" id="masterdata" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
               <nav class="sb-sidenav-menu-nested nav">
                 <a class="nav-link" href="/admin/user">User</a>
-                <a class="nav-link" href="/admin/partner">Partner</a>
                 <a class="nav-link" href="/admin/social_media">Social Media</a>
+                <a class="nav-link" href="/admin/partners">Partners</a>
+                <a class="nav-link" href="/admin/company_logo">Company Logo</a>
                 <a class="nav-link" href="/admin/certificate">Certificate</a>
-                <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                <a class="nav-link" href="/admin/category">Category</a>
+                <a class="nav-link" href="/admin/sub_category">Sub Category</a>
+                <a class="nav-link" href="/admin/service_feature">Service</a>
+                <a class="nav-link" href="/admin/newsletter_subscribe">News</a>
+              </nav>
+            </div>
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#product"
+              aria-expanded="false" aria-controls="collapseLayouts">
+              <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
+              Product
+              <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="product" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="/admin/product">Product</a>
+                <a class="nav-link" href="/admin/product_images">Product Images</a>
+                <a class="nav-link" href="/admin/product_dimension">Product Dimension</a>
+              </nav>
+            </div>
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#messages"
+              aria-expanded="false" aria-controls="collapseLayouts">
+              <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+              Messages
+              <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="messages" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="/admin/inbox">Inbox</a>
+                <a class="nav-link" href="/admin/sent">Sent</a>
               </nav>
             </div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#sitesettings"
@@ -70,15 +99,17 @@
             </a>
             <div class="collapse" id="sitesettings" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
               <nav class="sb-sidenav-menu-nested nav">
-                <a class="nav-link" href="/admin/user">Carousel</a>
-                <a class="nav-link" href="/admin/partner">Partner</a>
-                <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                <a class="nav-link" href="/admin/header_section">Header</a>
+                <a class="nav-link" href="/admin/footer_section">Footer</a>
+                <a class="nav-link" href="/admin/carousel">Carousel</a>
+                <a class="nav-link" href="/admin/about_us">About Us</a>
+                <a class="nav-link" href="/admin/contact_us">Contact Us</a>
               </nav>
             </div>
             <div class="sb-sidenav-menu-heading">Setting</div>
-            <a class="nav-link" href="charts.html">
-              <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
-              Email
+            <a class="nav-link" href="/admin/email">
+              <div class="sb-nav-link-icon"><i class="fas fa-wrench"></i></div>
+              Configuration
             </a>
           </div>
         </div>
