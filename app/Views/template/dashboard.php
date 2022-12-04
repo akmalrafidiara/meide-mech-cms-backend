@@ -58,6 +58,7 @@
                 <a class="nav-link" href="/admin/user">User</a>
                 <a class="nav-link" href="/admin/partner">Partner</a>
                 <a class="nav-link" href="/admin/social_media">Social Media</a>
+                <a class="nav-link" href="/admin/certificte">Certificate</a>
                 <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
               </nav>
             </div>
