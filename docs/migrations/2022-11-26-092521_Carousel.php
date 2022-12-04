@@ -28,16 +28,14 @@ class Carousel extends Migration
                 'constraint' => '255',
             ],
             'description' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'TEXT',
             ],
             'link' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
             'status' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'BOOLEAN',
             ],
             'createDate' => [
                 'type'       => 'DATETIME',

@@ -20,16 +20,15 @@ class AboutUs extends Migration
                 'constraint' => '255',
             ],
             'description' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'TEXT',
             ],
             'video' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
             'other_description' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'TEXT',
+                'null' => true,
             ],
             'createDate' => [
                 'type'       => 'DATETIME',

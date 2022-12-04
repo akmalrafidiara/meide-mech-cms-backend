@@ -24,12 +24,10 @@ class HeaderSection extends Migration
                 'constraint' => '255',
             ],
             'description' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'TEXT',
             ],
             'status' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'BOOLEAN',
             ],
             'createDate' => [
                 'type'       => 'DATETIME',

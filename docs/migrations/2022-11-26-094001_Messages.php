@@ -32,24 +32,25 @@ class Messages extends Migration
                 'constraint' => '255',
             ],
             'message' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'TEXT',
             ],
             'ip_address' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true,
             ],
             'user_agent' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true,
             ],
             'reading_status' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'BOOLEAN',
             ],
             'browser_name' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true,
             ],
             'sendBy' => [
                 'type'       => 'VARCHAR',
@@ -61,6 +62,7 @@ class Messages extends Migration
             'action' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true,
             ],
         ]);
         $this->forge->addKey('id', true);

@@ -104,8 +104,7 @@ class EmailSetting extends Migration
                 'constraint' => '255',
             ],
             'status' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'BOOLEAN',
             ],
             'createDate' => [
                 'type'       => 'DATETIME',

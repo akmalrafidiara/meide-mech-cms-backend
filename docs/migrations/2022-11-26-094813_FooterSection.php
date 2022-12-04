@@ -16,12 +16,11 @@ class FooterSection extends Migration
                 'auto_increment' => true,
             ],
             'content' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'type'       => 'TEXT',
             ],
             'telp_number' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => '20',
             ],
             'createDate' => [
                 'type'       => 'DATETIME',
