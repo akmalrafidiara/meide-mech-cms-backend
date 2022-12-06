@@ -130,4 +130,19 @@ class SocialMedia extends BaseController
         return redirect()->to('/admin/social_media');
     }
 
+    public function getSocialMedia()
+    {
+        $data = $this->sosmedModel->where(['status' => '1'])->findAll();
+
+        $response = [];
+        foreach ($data as $d) {
+            $icon = base_url() . '/img/' . $d['icon'];
+            $setup = [
+                'icon' => $icon,
+                'url' => $d['url'],
+            ];
+            array_push($response, $setup);
+        }
+        return $this->response->setJSON($response);
+    }
 }

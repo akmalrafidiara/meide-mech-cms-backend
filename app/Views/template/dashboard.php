@@ -60,8 +60,6 @@
                 <a class="nav-link" href="/admin/partners">Partners</a>
                 <a class="nav-link" href="/admin/company_logo">Company Logo</a>
                 <a class="nav-link" href="/admin/certificate">Certificate</a>
-                <a class="nav-link" href="/admin/category">Category</a>
-                <a class="nav-link" href="/admin/sub_category">Sub Category</a>
                 <a class="nav-link" href="/admin/service_feature">Service</a>
                 <a class="nav-link" href="/admin/newsletter_subscribe">News</a>
               </nav>
@@ -77,6 +75,8 @@
                 <a class="nav-link" href="/admin/product">Product</a>
                 <a class="nav-link" href="/admin/product_images">Product Images</a>
                 <a class="nav-link" href="/admin/product_dimension">Product Dimension</a>
+                <a class="nav-link" href="/admin/category">Category</a>
+                <a class="nav-link" href="/admin/sub_category">Sub Category</a>
               </nav>
             </div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#messages"

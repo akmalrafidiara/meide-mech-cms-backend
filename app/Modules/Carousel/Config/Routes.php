@@ -6,7 +6,7 @@ if (!isset($routes)) {
 
 $routes->group('admin', ['namespace' => 'App\Modules\carousel\Controllers', 'filter' => 'authGuard'], function ($subroutes) {
 
-    /*** Route for Social Media ***/
+    /*** Route for Carousel ***/
     $subroutes->get('carousel', 'Carousel::index');
     $subroutes->get('carousel/add', 'Carousel::create');
     $subroutes->post('carousel', 'Carousel::store');
@@ -17,6 +17,6 @@ $routes->group('admin', ['namespace' => 'App\Modules\carousel\Controllers', 'fil
 
 $routes->group('api', ['namespace' => 'App\Modules\carousel\Controllers'], function ($subroutes) {
 
-    /*** Route for Social Media ***/
+    /*** Route API for Carousel ***/
     $subroutes->get('carousel', 'Carousel::getCarousel');
 });

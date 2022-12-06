@@ -15,9 +15,8 @@ $routes->group('admin', ['namespace' => 'App\Modules\SocialMedia\Controllers', '
     $subroutes->delete('social_media/(:any)', 'SocialMedia::destroy/$1');
 });
 
-$routes->group('admin/api', ['namespace' => 'App\Modules\SocialMedia\Controllers', 'filter' => 'authGuard'], function ($subroutes) {
+$routes->group('api', ['namespace' => 'App\Modules\SocialMedia\Controllers'], function ($subroutes) {
 
-    /*** Route for Social Media ***/
-    $subroutes->add('social_media', 'SocialMedia::getAll');
-    $subroutes->add('social_media/(:any)', 'SocialMedia::getOne/$1');
+    /*** Route API for Social Media ***/
+    $subroutes->get('social_media', 'SocialMedia::getSocialMedia');
 });
