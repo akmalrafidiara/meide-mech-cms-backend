@@ -48,7 +48,7 @@ Create database tabel
 Create user to login
 
 ```bash
-  php spark migrate
+  php spark db:seed UserSeeder
 ```
 
 `username: admin`
