@@ -28,8 +28,7 @@
                     </div>
                   </div>
                   <div class="col-6">
-                    <img src="/img/<?= $data['icon'] ?>" alt="" style="width: 150px; height: 150px; object-fit: cover;"
-                      id="imgPreview">
+                    <img src="/img/<?= $data['icon'] ?>" alt="" style="width: 150px;" id="imgPreview">
                   </div>
                 </div>
               </div>

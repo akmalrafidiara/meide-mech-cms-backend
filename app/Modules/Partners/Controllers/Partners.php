@@ -130,4 +130,19 @@ class Partners extends BaseController
         return redirect()->to('/admin/partners');
     }
 
+    public function getPartners()
+    {
+        $data = $this->partnersModel->where(['status' => '1'])->findAll();
+
+        $response = [];
+        foreach ($data as $d) {
+            $images = base_url() . '/img/' . $d['images'];
+            $setup = [
+                'images' => $images,
+                'link' => $d['link'],
+            ];
+            array_push($response, $setup);
+        }
+        return $this->response->setJSON($response);
+    }
 }

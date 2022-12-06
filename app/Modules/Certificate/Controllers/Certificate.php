@@ -128,4 +128,18 @@ class Certificate extends BaseController
         return redirect()->to('/admin/certificate');
     }
 
+    public function getCertificate()
+    {
+        $data = $this->certificateModel->where(['status' => '1'])->findAll();
+
+        $response = [];
+        foreach ($data as $d) {
+            $images = base_url() . '/img/' . $d['images'];
+            $setup = [
+                'images' => $images,
+            ];
+            array_push($response, $setup);
+        }
+        return $this->response->setJSON($response);
+    }
 }

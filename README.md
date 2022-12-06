@@ -29,6 +29,14 @@ Go to the project directory
   cd meide-mech-cms-backend
 ```
 
+Change brench
+
+```bash
+  git checkout sprint-<n>
+```
+
+`now brench 4`
+
 - Create database on mysql
 - Duplicate `env` and rename to `.env`
 - Setting database on `.env`

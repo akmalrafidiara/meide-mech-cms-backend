@@ -21,15 +21,14 @@
                 <div class="row d-flex align-items-center">
                   <div class="col-6">
                     <label for="images" class="form-label">Images</label>
-                    <input class="form-control  <?= ($validation->hasError('images')) ? 'is-invalid' : '' ?>" type="file"
-                      id="images" onchange="previewImg()" name="images">
+                    <input class="form-control  <?= ($validation->hasError('images')) ? 'is-invalid' : '' ?>"
+                      type="file" id="images" onchange="previewImg()" name="images">
                     <div class="invalid-feedback">
                       <?= $validation->getError('images') ?>
                     </div>
                   </div>
                   <div class="col-6">
-                    <img src="/img/<?= $data['images'] ?>" alt="" style="width: 150px; height: 150px; object-fit: cover;"
-                      id="imgPreview">
+                    <img src="/img/<?= $data['images'] ?>" alt="" style="width: 150px;" id="imgPreview">
                   </div>
                 </div>
               </div>
