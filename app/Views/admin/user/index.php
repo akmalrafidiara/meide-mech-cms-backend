@@ -5,10 +5,10 @@
       <li class="breadcrumb-item active">Data User</li>
     </ol>
     <a href="user/add" class="btn btn-primary mb-4">Add User</a>
-    <?php if (session()->getFlashdata('msg')): ?>
+    <?php if (session()->getFlashdata('msg')) : ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <?= session()->getFlashdata('msg') ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <?php endif; ?>
     <div class="card mb-4">

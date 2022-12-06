@@ -62,12 +62,13 @@ class Auth extends BaseController
                     $session->setFlashdata('msg', 'Account status deactive!');
                     return redirect()->to('/login');
                 }
+                $agent = $this->request->getUserAgent();
                 $update = [
                     'id' => $data['id'],
                     'last_login' => date("Y-m-d H:i:s"),
                     'last_login_ip' => $this->get_client_ip(),
-                    'last_login_agent' => $_SERVER['HTTP_USER_AGENT'],
-                    'browser_name' => get_browser(null, true)['browser'],
+                    'last_login_agent' => $agent->getVersion(),
+                    'browser_name' => $agent->getBrowser(),
                     'is_online' => 1
                 ];
                 $this->authModel->save($update);

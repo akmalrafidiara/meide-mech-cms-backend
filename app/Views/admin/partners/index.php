@@ -5,10 +5,10 @@
       <li class="breadcrumb-item active">Data Partners</li>
     </ol>
     <a href="partners/add" class="btn btn-primary mb-4">Add Partners</a>
-    <?php if (session()->getFlashdata('msg')): ?>
+    <?php if (session()->getFlashdata('msg')) : ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <?= session()->getFlashdata('msg') ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <?php endif; ?>
     <div class="card mb-4">
@@ -41,7 +41,7 @@
             <tr>
               <td><?= $key + 1 ?></td>
               <td><img src="/img/<?= $d['images'] ?>" alt="" width="70"></td>
-              <td><a href="http://<?= $d['link'] ?>" target="_blank"><?= $d['link'] ?></a></td>
+              <td><a href="<?= $d['link'] ?>" target="_blank"><?= $d['link'] ?></a></td>
               <td>
                 <?= $d['status'] == '1' ? '<span class="badge bg-success">Active</span>' : '<span class="badge bg-danger">Deactive</span>' ?>
               </td>
