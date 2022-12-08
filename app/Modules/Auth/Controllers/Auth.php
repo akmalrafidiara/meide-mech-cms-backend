@@ -74,6 +74,7 @@ class Auth extends BaseController
                 $this->authModel->save($update);
                 $ses_data = [
                     'id' => $data['id'],
+                    'uuid' => $data['uuid'],
                     'full_name' => $data['full_name'],
                     'email' => $data['email'],
                     'username' => $data['username'],
